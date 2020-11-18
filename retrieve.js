@@ -7,3 +7,10 @@ Object.entries(localStorage).forEach(([key,val]) => {
     }
 });
 console.log(participantMonitorResults.toString());
+
+try {
+    copy(participantMonitorResults.toString());
+    console.log("Copied to clipboard");
+} catch(err) {
+    console.log("Could not copy to clipboard");
+}
